@@ -24,8 +24,6 @@ neighbors(P1, P2) :-
 number_neighbors(N1, N2) :- N1 is N2 - 1.
 number_neighbors(N1, N2) :- N1 is N2 + 1.
 
-
-
 ?- neighbors(cameron, edgar).
 false.
 
@@ -62,10 +60,26 @@ P = kok ;
 P = trump ;
 false.
 
+?- neighbors(beth,Y).
+Y = adam ;
+Y = harry ;
+false.
 
 
+address(adam,1,kakl).
+address(beth,2,kakl).
+address(harry,3,kakl).
 
-
+?- neighbors(BETH,Y).
+BETH = adam,
+Y = beth ;
+BETH = beth,
+Y = adam ;
+BETH = beth,
+Y = harry ;
+BETH = harry,
+Y = beth ;
+false.
 
 rainy(seattle).
 rainy(rochester).
@@ -74,8 +88,6 @@ cold(rochester).
 cold(seattle).
 
 snowy(X) :- rainy(X), cold(X).
-
-
 
 ?- snowy(C).
 C = seattle ;
