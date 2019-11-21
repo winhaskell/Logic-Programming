@@ -1,0 +1,40 @@
+my_last(X,[X]).
+my_last(X,[_|L]) :- my_last(X,L).
+
+?- my_last(X,[a,b,c,d]).
+X = d ;
+false.
+
+?- my_last(X,[a,b,c,d,k,o,u]).
+X = u ;
+false.
+
+
+
+element_at(X,[X|_],1).
+element_at(X,[_|L],K) :- K > 1, K1 is K - 1, element_at(X,L,K1).
+
+?- element_at(X,[a,b,c,d,e],2).
+X = b .
+
+?- element_at(X,[a,b,c,d,e],4).
+X = d .
+
+?- element_at(X,[a,b,c,d,e],6).
+false.
+
+?- element_at(X,[a,b,c,d,e],1).
+X = a .
+
+?- element_at(X,[a,b,c,d,e],0).
+false.
+
+?- element_at(X,[a,b,c,d,e],5).
+X = e .
+
+?- element_at(X,[a,b,c,d,e],3).
+X = c .
+
+?- 
+
+
