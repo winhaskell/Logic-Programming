@@ -1,0 +1,12 @@
+Horn Clause Form
+
+<Exp>      ::= <rule> |
+               <query>
+<rule>     ::= <atom> |                        
+               <atom> <= <literals>           
+<query>    ::= ? <literals>                    
+<literal>  ::= atom | not <atom>
+<literals> ::= <literal> [and <literals>]
+<atom>     ::= <predicate_ident> [ ( <terms> ) ]            
+<term>     ::= <ident> ( <terms> )  | <constant> | <variable>
+<terms>    ::= <term> [, <terms>]
