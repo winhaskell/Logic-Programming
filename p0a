@@ -35,6 +35,27 @@ X = e .
 ?- element_at(X,[a,b,c,d,e],3).
 X = c .
 
-?- 
+
+
+?- last_but_one(X,[m,k,t]).
+X = k ;
+
+last_but_one(X,[X,_]).
+last_but_one(X,[_,Y|Ys]) :- last_but_one(X,[Y|Ys]).
+
+?- last_but_one(X,[e,l,t,e]).
+X = t .
+
+
+
+
+?- my_length([a,b,c,d],X).
+X = 4.
+
+?- my_length([a,b,c,d,k,o],X).
+X = 6.
+
+my_length([],0).
+my_length([_|L],N) :- my_length(L,N1), N is N1 + 1.
 
 
