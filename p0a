@@ -59,3 +59,28 @@ my_length([],0).
 my_length([_|L],N) :- my_length(L,N1), N is N1 + 1.
 
 
+
+append([],L,L).
+append([H | T],L,[H | V]) :- append(T,L,V).
+
+?- append([12,3,33,66],[56,78,99,889],L),!.
+L = [12, 3, 33, 66, 56, 78, 99, 889].
+
+?- append([12,ABC,33,66],[56,78,99,889],L),!.
+L = [12, ABC, 33, 66, 56, 78, 99, 889].
+
+
+
+reverse([],[]).
+reverse([H|T],List) :- reverse(T,Z), append(Z,[H],List).
+
+?- reverse([45,67,88],L).
+L = [88, 67, 45].
+
+?- reverse([125,67,8,12,45,7,101,-1],L).
+L = [-1, 101, 7, 45, 12, 8, 67, 125].
+
+
+
+
+
