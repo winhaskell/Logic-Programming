@@ -1,0 +1,64 @@
+year_month_daily_visitors(2019, jan, 10010).
+year_month_daily_visitors(2019, feb, 12422).
+year_month_daily_visitors(2019, mar, 13333).
+year_month_daily_visitors(2019, apr, 18798).
+
+
+year_month_total(Year, Month, Total) :-
+        Total #= Days*DailyNum,
+        year_month_days(Year, Month, Days),
+        year_month_daily_visitors(Year, Month, DailyNum).
+		
+
+year_month_days(2019, jan, 31).
+year_month_days(2019, feb, 28).
+year_month_days(2019, mar, 31).
+year_month_days(2019, apr, 30).
+    
+
+
+
+[1]  ?- year_month_total(Year, Month, Total).
+Year = 2019,
+Month = jan,
+Total = 310310 ;
+Year = 2019,
+Month = feb,
+Total = 347816 ;
+Year = 2019,
+Month = mar,
+Total = 413323 ;
+Year = 2019,
+Month = apr,
+Total = 563940.
+
+
+[1]  ?- format("year month visitors~n", []),
+   year_month_total(Year, Month, Total), 
+   format("~w ~w ~t~D~18|~n", [Year,Month,Total]),false.  
+year month visitors
+2019 jan   310,310
+2019 feb   347,816
+2019 mar   413,323
+2019 apr   563,940
+false.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
