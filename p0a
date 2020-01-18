@@ -102,15 +102,32 @@ X = [a, z, a, b, c, d, e, k, v]
 
 
 
+is_prime(2).
+is_prime(3).
+is_prime(P) :- integer(P), P > 3, P mod 2 =\= 0, \+ has_factor(P,3).  
+has_factor(N,L) :- N mod L =:= 0.
+has_factor(N,L) :- L * L < N, L2 is L + 2, has_factor(N,L2).
 
+[1]  ?- is_prime(2017).
+true.
 
+[1]  ?- is_prime(1).
+false.
 
+[1]  ?- is_prime(0).
+false.
 
+[1]  ?- is_prime(2).
+true
 
+[1]  ?- is_prime(2019).
+false.
 
+[1]  ?- is_prime(2020).
+false.
 
-
-
+[1]  ?- is_prime(1117).
+true.
 
 
 
