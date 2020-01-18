@@ -81,6 +81,37 @@ L = [88, 67, 45].
 L = [-1, 101, 7, 45, 12, 8, 67, 125].
 
 
+my_reverse(L1,L2) :- my_rev(L1,L2,[]).
+my_rev([],L2,L2) :- !.
+my_rev([X|Xs],L2,Acc) :- my_rev(Xs,L2,[X|Acc]).
+
+?- my_reverse([5,3,6],L2).
+L2 = [6, 3, 5].
+
+
+
+compress([],[]).
+compress([X],[X]).
+compress([X,X|Xs],Zs) :- compress([X|Xs],Zs).
+compress([X,Y|Ys],[X|Zs]) :- X \= Y, compress([Y|Ys],Zs).
+
+?- compress([a,a,z,z,a,b,c,c,c,d,d,e,e,k,k,k,k,v,v,v],X).
+X = [a, z, a, b, c, d, e, k, v] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
