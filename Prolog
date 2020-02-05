@@ -1,0 +1,2 @@
+https://blogcompsci.wordpress.com/category/programming/prolog/
+Logic Programming
