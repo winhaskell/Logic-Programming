@@ -1,0 +1,41 @@
+animal(dog)  :- is_true('has fur'), is_true('says woof').
+animal(cat)  :- is_true('has fur'), is_true('says meow').
+animal(duck) :- is_true('has feathers'), is_true('says quack').
+
+is_true(Q) :-
+        format("~w?\n", [Q]),
+        read(yes).
+        
+
+?- animal(A).
+has fur?
+|: yes.
+says woof?
+|: no.
+has fur?
+|: yes.
+says meow?
+|: yes.
+
+A = cat .
+
+
+
+?- animal(B).
+has fur?
+|: yes.
+says woof?
+|: yes.
+
+B = dog .
+
+
+
+
+
+
+
+
+
+
+
