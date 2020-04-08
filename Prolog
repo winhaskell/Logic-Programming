@@ -4,6 +4,9 @@ https://blogcompsci.wordpress.com/category/programming/prolog/
 Introduction
 https://dev.to/matchilling/introduction-to-logic-programming-with-prolog-cdh
 
+Functional and Logic Programming
+https://www.cs.auckland.ac.nz/~j-hamer/07.363/explore.html
+https://www.cs.auckland.ac.nz/~j-hamer/07.363/
 
 
 
