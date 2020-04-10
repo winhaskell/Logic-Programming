@@ -8,5 +8,6 @@ Functional and Logic Programming
 https://www.cs.auckland.ac.nz/~j-hamer/07.363/explore.html
 https://www.cs.auckland.ac.nz/~j-hamer/07.363/
 
+http://www.learnprolognow.org/lpnpage.php?pageid=online
 
 
