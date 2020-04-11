@@ -1,0 +1,100 @@
+[trace]  ?- go.
+   Call: (8) go ? creep
+   Call: (9) fruit(_2996) ? creep
+   Call: (10) colour(yellow) ? creep
+   Call: (11) menuask(colour, yellow, [red, orange, yellow, green, purple, peach]) ? creep
+   Call: (12) known(yes, colour, yellow) ? creep
+   Exit: (12) known(yes, colour, yellow) ? creep
+   Exit: (11) menuask(colour, yellow, [red, orange, yellow, green, purple, peach]) ? creep
+   Exit: (10) colour(yellow) ? creep
+   Call: (10) shape(crescent) ? creep
+   Call: (11) menuask(shape, crescent, [sphere, crescent, 'tapered sphere', 'flat sphere', stick]) ? creep
+   Call: (12) known(yes, shape, crescent) ? creep
+   Fail: (12) known(yes, shape, crescent) ? creep
+   Redo: (11) menuask(shape, crescent, [sphere, crescent, 'tapered sphere', 'flat sphere', stick]) ? creep
+   Call: (12) known(_3062, shape, crescent) ? creep
+   Fail: (12) known(_3062, shape, crescent) ? creep
+   Redo: (11) menuask(shape, crescent, [sphere, crescent, 'tapered sphere', 'flat sphere', stick]) ? creep
+   Call: (12) known(yes, shape, _3066) ? creep
+   Exit: (12) known(yes, shape, sphere) ? creep
+   Call: (12) sphere\==crescent ? creep
+   Exit: (12) sphere\==crescent ? creep
+   Call: (12) fail ? creep
+   Fail: (12) fail ? creep
+   Fail: (11) menuask(shape, crescent, [sphere, crescent, 'tapered sphere', 'flat sphere', stick]) ? creep
+   Fail: (10) shape(crescent) ? creep
+   Redo: (9) fruit(_2996) ? creep
+   Call: (10) colour(green) ? creep
+   Call: (11) menuask(colour, green, [red, orange, yellow, green, purple, peach]) ? creep
+   Call: (12) known(yes, colour, green) ? creep
+   Fail: (12) known(yes, colour, green) ? creep
+   Redo: (11) menuask(colour, green, [red, orange, yellow, green, purple, peach]) ? creep
+   Call: (12) known(_3032, colour, green) ? creep
+   Fail: (12) known(_3032, colour, green) ? creep
+   Redo: (11) menuask(colour, green, [red, orange, yellow, green, purple, peach]) ? creep
+   Call: (12) known(yes, colour, _3036) ? creep
+   Exit: (12) known(yes, colour, yellow) ? creep
+   Call: (12) yellow\==green ? creep
+   Exit: (12) yellow\==green ? creep
+   Call: (12) fail ? creep
+   Fail: (12) fail ? creep
+   Fail: (11) menuask(colour, green, [red, orange, yellow, green, purple, peach]) ? creep
+   Fail: (10) colour(green) ? creep
+   Redo: (9) fruit(apple) ? creep
+   Call: (10) colour(red) ? creep
+   Call: (11) menuask(colour, red, [red, orange, yellow, green, purple, peach]) ? creep
+   Call: (12) known(yes, colour, red) ? creep
+   Fail: (12) known(yes, colour, red) ? creep
+   Redo: (11) menuask(colour, red, [red, orange, yellow, green, purple, peach]) ? creep
+   Call: (12) known(_3032, colour, red) ? creep
+   Fail: (12) known(_3032, colour, red) ? creep
+   Redo: (11) menuask(colour, red, [red, orange, yellow, green, purple, peach]) ? creep
+   Call: (12) known(yes, colour, _3036) ? creep
+   Exit: (12) known(yes, colour, yellow) ? creep
+   Call: (12) yellow\==red ? creep
+   Exit: (12) yellow\==red ? creep
+   Call: (12) fail ? creep
+   Fail: (12) fail ? creep
+   Fail: (11) menuask(colour, red, [red, orange, yellow, green, purple, peach]) ? creep
+   Fail: (10) colour(red) ? creep
+   Redo: (9) fruit(_2996) ? creep
+   Call: (10) colour(yellow) ? creep
+   Call: (11) menuask(colour, yellow, [red, orange, yellow, green, purple, peach]) ? creep
+   Call: (12) known(yes, colour, yellow) ? creep
+   Exit: (12) known(yes, colour, yellow) ? creep
+   Exit: (11) menuask(colour, yellow, [red, orange, yellow, green, purple, peach]) ? creep
+   Exit: (10) colour(yellow) ? creep
+   Call: (10) shape(sphere) ? creep
+   Call: (11) menuask(shape, sphere, [sphere, crescent, 'tapered sphere', 'flat sphere', stick]) ? creep
+   Call: (12) known(yes, shape, sphere) ? creep
+   Exit: (12) known(yes, shape, sphere) ? creep
+   Exit: (11) menuask(shape, sphere, [sphere, crescent, 'tapered sphere', 'flat sphere', stick]) ? creep
+   Exit: (10) shape(sphere) ? creep
+   Call: (10) acidic(yes) ? creep
+   Call: (11) ask(acidic, yes) ? creep
+   Call: (12) known(yes, acidic, yes) ? creep
+   Exit: (12) known(yes, acidic, yes) ? creep
+   Exit: (11) ask(acidic, yes) ? creep
+   Exit: (10) acidic(yes) ? creep
+   Exit: (9) fruit(lemon) ? creep
+   Call: (9) write('The fruit is ') ? creep
+The fruit is 
+   Exit: (9) write('The fruit is ') ? creep
+   Call: (9) write(lemon) ? creep
+lemon
+   Exit: (9) write(lemon) ? creep
+   Call: (9) nl ? creep
+
+   Exit: (9) nl ? creep
+   Exit: (8) go ? 
+   
+true .
+
+[trace]  ?- 
+
+
+
+
+
+
+
