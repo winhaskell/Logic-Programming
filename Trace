@@ -1,0 +1,11 @@
+http://www.cse.unsw.edu.au/~billw/dictionaries/prolog/tracing.html
+
+tracing
+Tracing the execution of a Prolog query allows you to see all of the goals that are executed as part of the query, 
+in sequence, along with whether or not they succeed. Tracing also allows you to see what steps occur as Prolog backtracks.
+
+To turn on tracing in Prolog, execute the "goal"
+?- trace.
+true.
+
+
