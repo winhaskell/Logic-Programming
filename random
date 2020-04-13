@@ -1,0 +1,193 @@
+?- use_module(library(random)).
+true.
+
+?- random(X).
+X = 0.6830768451541358.
+
+?- random(0, 100, X).        
+X = 8.
+
+?- random(0, 100, X).
+X = 56.
+
+?- random(0, 100, X).
+X = 70.
+
+?- random(0, 100, X).
+X = 39.
+
+?- 
+|    random(0, 100, X).
+X = 8.
+
+?- random(0, 100, X).
+X = 62.
+
+?- random(0, 100, X).
+X = 56.
+
+?- random(0, 100, X).
+X = 11.
+
+?- random(0, 100, X).
+X = 52.
+
+?- random(0, 100, X).
+X = 77.
+
+?- random(0, 100, X).
+X = 72.
+
+?- random(0, 100, X).
+X = 26.
+
+?- random(0, 100, X).
+X = 95.
+
+?-  maybe.    
+false.
+
+?-  maybe.    
+true.
+
+?- maybe.
+true.
+
+?- maybe.
+true.
+
+?- maybe.
+true.
+
+?- maybe.
+false.
+
+?- maybe.
+false.
+
+?- maybe.
+true.
+
+?- random_member(X, [1, 2, 3, 4, 5]).  
+X = 2.
+
+?- random_member(X, [1, 2, 3, 4, 5]).  
+X = 2.
+
+?- random_member(X, [1, 2, 3, 4, 5]).  
+X = 3.
+
+?- random_member(X, [1, 2, 3, 4, 5]).  
+X = 1.
+
+?- random_member(X, [1, 2, 3, 4, 5]).  
+X = 1.
+
+?- random_member(X, [1, 2, 3, 4, 5]).  
+X = 3.
+
+?- random_member(X, [1, 2, 3, 4, 5]).  
+X = 2.
+
+?- random_member(X, [1, 2, 3, 4, 5]).  
+X = 4.
+
+?- random_member(X, [1, 2, 3, 4, 5]).  
+X = 2.
+
+?- random_member(X, [1, 2, 3, 4, 5]).  
+X = 4.
+
+?- random_member(X, [1, 2, 3, 4, 5]).  
+X = 5.
+
+?- random_member(X, [1, 2, 3, 4, 5]).  
+X = 3.
+
+?- random_member(X, [1, 2, 3, 4, 5]).  
+X = 2.
+
+?- randset(6, 100, X).   
+X = [17, 18, 27, 31, 72, 86].
+
+?- randset(6, 100, X).
+X = [14, 74, 81, 93, 96, 99].
+
+?- randset(6, 100, X).
+X = [9, 26, 31, 43, 80, 90].
+
+?- randset(6, 100, X).
+X = [1, 10, 37, 61, 90, 93].
+
+?- randset(6, 100, X).
+X = [9, 65, 69, 71, 74, 96].
+
+?- randset(6, 100, X).
+X = [7, 12, 16, 21, 22, 33].
+
+?- randset(4, 40, Y).
+Y = [11, 21, 30, 32].
+
+?- randset(4, 40, Y).
+Y = [4, 12, 13, 14].
+
+?- randset(4, 40, Y).
+Y = [6, 15, 23, 35].
+
+?- randset(4, 40, Y).
+Y = [3, 18, 22, 40].
+
+?- randset(4, 40, Y).
+Y = [1, 32, 36, 39].
+
+?- randset(4, 40, Y).
+Y = [14, 16, 22, 33].
+
+?- randseq(4, 100, Z).  
+Z = [40, 74, 12, 30].
+
+?- randseq(4, 100, Z).
+Z = [9, 34, 16, 48].
+
+?- randseq(4, 100, Z).
+Z = [17, 100, 28, 78].
+
+?- randseq(4, 100, Z).
+Z = [88, 89, 9, 81].
+
+?- randseq(4, 100, Z).
+Z = [67, 87, 60, 63].
+
+?- randseq(4, 100, Z).
+Z = [95, 36, 74, 69].
+
+?- randseq(4, 100, Z).
+Z = [88, 22, 35, 86].
+
+?- randseq(4, 100, Z).
+Z = [57, 13, 50, 25].
+
+?- randseq(4, 100, Z).
+Z = [81, 49, 21, 22].
+
+?- maybe(0.666).
+false.
+
+?- maybe(0.666).
+true.
+
+?- maybe(0.666).
+true.
+
+?- maybe(0.666).
+false.
+
+?- maybe(0.798).
+true.
+
+?- maybe(0.798).
+false.
+
+
+
+
