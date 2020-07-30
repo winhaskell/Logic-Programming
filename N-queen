@@ -1,0 +1,130 @@
+
+queen_doesnt_hit(_,_,[]) :- !.
+queen_doesnt_hit(Col,Row_dist,[A_queen_col|Other_queens]) :- !,
+		Diag_hit_col1 is Col + Row_dist, A_queen_col =\= Diag_hit_col1,
+		Diag_hit_col2 is Col - Row_dist, A_queen_col =\= Diag_hit_col2,
+		Row_dist1 is Row_dist + 1,
+		queen_doesnt_hit(Col,Row_dist1,Other_queens).
+	
+
+safe_position([_]) :- !.	% A single queen position is always safe
+safe_position([A_queen|Other_queens]) :- !,
+	queen_doesnt_hit(A_queen,1,Other_queens),
+	safe_position(Other_queens).
+
+% Check the safe_position predicate...
+
+
+/*
+ *------------------------------------------------------------------------
+ * The following function searches for a safe layout. 
+ * It produces a permutation of a given list and checks to see if it
+ * corresponds to a safe position.
+ *
+ */
+
+do_insert(X,Y,[X|Y]).
+do_insert(X,[Y1|Y2],[Y1|Z]) :- do_insert(X,Y2,Z).
+
+permute([X],[X]).
+permute([X|Y],Z) :- permute(Y,Z1), do_insert(X,Z1,Z).
+
+
+safe_layout(Layout,Layout1) :-
+	permute(Layout,Layout1), safe_position(Layout1).
+
+safe_layout_all(Layout) :- 
+ nl,nl,print('Solving an n-queen problem with n='),
+ length(Layout,N), print(N), nl,
+	safe_layout(Layout,Layout1),
+	print(Layout1),nl,
+	fail.
+safe_layout_all(_).
+
+
+
+
+
+
+܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀܀
+
+
+
+?- safe_layout_all([1,2,3,4]).
+
+'Solving an n-queen problem with n='4
+[3,1,4,2]
+[2,4,1,3]
+true.
+
+
+
+
+?- safe_layout_all([1,2,3,4,5]).
+
+'Solving an n-queen problem with n='5
+[3,1,4,2,5]
+[2,4,1,3,5]
+[4,1,3,5,2]
+[1,4,2,5,3]
+[4,2,5,3,1]
+[1,3,5,2,4]
+[3,5,2,4,1]
+[2,5,3,1,4]
+[5,3,1,4,2]
+[5,2,4,1,3]
+true.
+
+
+
+
+?- safe_layout_all([1,2,3,4,5,6,7]).
+
+'Solving an n-queen problem with n='7
+[4,1,5,2,6,3,7]
+[5,3,1,6,4,2,7]
+[5,1,6,4,2,7,3]
+[1,5,2,6,3,7,4]
+[5,2,6,3,7,4,1]
+[2,4,6,1,3,5,7]
+[4,6,1,3,5,7,2]
+[3,6,2,5,1,4,7]
+[6,2,5,1,4,7,3]
+[3,1,6,2,5,7,4]
+[6,1,3,5,7,2,4]
+[6,3,5,7,1,4,2]
+[4,1,3,6,2,7,5]
+[3,1,6,4,2,7,5]
+[6,3,1,4,7,5,2]
+[6,4,7,1,3,5,2]
+[1,6,4,2,7,5,3]
+[6,4,2,7,5,3,1]
+[2,6,3,7,4,1,5]
+[6,3,7,4,1,5,2]
+[2,5,1,4,7,3,6]
+[5,1,4,7,3,6,2]
+[1,3,5,7,2,4,6]
+[3,5,7,2,4,6,1]
+[2,5,3,1,7,4,6]
+[2,5,7,4,1,3,6]
+[5,7,2,4,6,1,3]
+[5,7,2,6,3,1,4]
+[2,4,1,7,5,3,6]
+[4,2,7,5,3,1,6]
+[4,7,5,2,6,1,3]
+[3,7,4,1,5,2,6]
+[7,4,1,5,2,6,3]
+[2,7,5,3,1,6,4]
+[7,5,3,1,6,4,2]
+[1,4,7,3,6,2,5]
+[4,7,3,6,2,5,1]
+[3,7,2,4,6,1,5]
+[7,2,4,6,1,3,5]
+[7,3,6,2,5,1,4]
+true.
+
+
+
+
+
+
