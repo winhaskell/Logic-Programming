@@ -13,8 +13,9 @@ http://www.learnprolognow.org/lpnpage.php?pageid=online
 https://www.cl.cam.ac.uk/teaching/1011/Prolog/
 
 
-
-
+A Concise Introduction to Prolog
+Copyright © 1989, 1995, 2012 by David Matuszek
+https://www.cis.upenn.edu/~matuszek/Concise%20Guides/Concise%20Prolog.html#firstlook
 
 
 
