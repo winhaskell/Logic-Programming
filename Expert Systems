@@ -1,5 +1,13 @@
 Expert Systems
 https://www.metalevel.at/prolog/expertsystems
 
+Introduction
+An expert system emulates the decision-making ability of a human expert.
 
+Prolog is very well suited for implementing expert systems
+
+We have now seen three different ways to implement an expert system in Prolog:
+direct Prolog implementation
+devising and interpreting a domain-specific language
+using a completely different domain-specific language.
 
